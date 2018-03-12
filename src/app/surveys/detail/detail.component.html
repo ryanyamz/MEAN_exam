@@ -1,0 +1,39 @@
+
+<nav>
+  <a routerLink="/surveys">Go to Polls</a>
+</nav>
+<h2>{{survey?.question}}</h2>
+<h4>Click the Vote button to choose one.</h4>
+
+<section>
+  <table>
+    <thead>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>{{ survey?.option_1 }}</td>
+        <td>{{ survey?.vote1 }}</td>
+        <td><button (click)="vote(survey._id, 'vote1')">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{ survey?.option_2 }}</td>
+        <td>{{ survey?.vote2 }}</td>
+        <td><button (click)="vote(survey._id, 'vote2')">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{ survey?.option_3 }}</td>
+        <td>{{ survey?.vote3 }}</td>
+        <td><button (click)="vote(survey._id, 'vote3')">Vote</button></td>
+      </tr>
+      <tr>
+        <td>{{ survey?.option_4 }}</td>
+        <td>{{ survey?.vote4 }}</td>
+        <td><button (click)="vote(survey._id, 'vote4')">Vote</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -31,8 +31,8 @@ export class SurveyDetailComponent implements OnInit {
   }
 
   vote(id, option) {
+    // this.survey[option] = 0;
     console.log('clicked vote', this.survey);
-    this.survey[option] = 0;
     this.surveyService.updateSurvey(id, this.survey)
       .subscribe(survey => {
       this.survey[option]++;

@@ -4,12 +4,12 @@ export class Survey {
   _id: string;
   question: string;
   option_1: string;
-  vote1: number;
+  vote1: number = 0;
   option_2: string;
-  vote2: number;
+  vote2: number = 0;
   option_3: string;
-  vote3: number;
+  vote3: number = 0;
   option_4: string;
-  vote4: number;
+  vote4: number = 0;
   user: User;
 }

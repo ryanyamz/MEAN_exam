@@ -28,10 +28,6 @@ export class SurveyNewComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
-    this.survey.vote1 = 0;
-    this.survey.vote2 = 0;
-    this.survey.vote3 = 0;
-    this.survey.vote4 = 0;
     console.log('in onSubmit survey component')
     this.surveyService.createSurvey({...this.survey, user: this.user})
       .subscribe(() => {

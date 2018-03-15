@@ -31,11 +31,10 @@ export class SurveyDetailComponent implements OnInit {
   }
 
   vote(id, option) {
-    // this.survey[option] = 0;
     console.log('clicked vote', this.survey);
+    this.survey[option]++; //before the updateSurvey method so it saves properly
     this.surveyService.updateSurvey(id, this.survey)
       .subscribe(survey => {
-      this.survey[option]++;
         console.log('completed vote', survey )
       })
   }

@@ -1,5 +1,6 @@
-<nav>
-  <a routerLink='/surveys/new'>Create a New Poll</a>
+<div class='wrapper'>
+<nav align='right'>
+  <a routerLink='/surveys/new'>Create a New Poll</a> |
   <a routerLink='/' (click)='onLogout()'>Logout</a>
 </nav>
 
@@ -20,9 +21,10 @@
         <td><a [routerLink]="['/surveys', survey._id]">{{ survey.question }}</a></td>
         <td>{{ survey.createdAt | date: 'mediumDate'}}</td>
         <td *ngIf='survey.user.name === this.user?.name'>
-          <button (click)='removeSurvey(survey)'>Delete</button>
+          <button (click)='removeSurvey(survey)' class='btn btn-danger btn-sm'>Delete</button>
         </td>
       </tr>
     </tbody>
   </table>
 </section>
+</div>

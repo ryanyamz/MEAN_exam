@@ -1,13 +1,15 @@
 <div class='wrapper'>
+<div class='container'>
 <nav align='right'>
   <a routerLink='/surveys/new'>Create a New Poll</a> |
   <a routerLink='/' (click)='onLogout()'>Logout</a>
 </nav>
+</div>
 
-<h3>Current Polls:</h3>
 
-<section>
-  <table>
+<section class='container'>
+  <h3>Current Polls:</h3>
+  <table class='table'>
     <thead>
       <th>Name</th>
       <th>Survey Question</th>

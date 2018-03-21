@@ -1,17 +1,15 @@
 <div class='wrapper'>
-<div class='container'>
-<fieldset>
-  <legend>Surveys</legend>
-
-  <form (submit)='onLogin($event, loginForm)' #loginForm='ngForm'>
-    <div class='form-group'>
-      <label for="">Your Name</label>
-      <input type="text" class='form-control' name='name' #name='ngModel' [(ngModel)]='user.name' minlength="3">
-    </div>
-    <button *ngIf='loginForm.valid' class='btn btn-primary'>Login</button>
-  </form>
-
-</fieldset>
-</div>
+  <div class='container'>
+    <fieldset>
+      <legend>Surveys</legend>
+      <form (submit)='onLogin($event, loginForm)' #loginForm='ngForm'>
+        <div class='form-group'>
+          <label for="">Your Name</label>
+          <input type="text" class='form-control' name='name' #name='ngModel' [(ngModel)]='user.name' minlength="3">
+        </div>
+        <button *ngIf='loginForm.valid' class='btn btn-primary'>Login</button>
+      </form>
+    </fieldset>
+  </div>
 </div>
 

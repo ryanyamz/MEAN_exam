@@ -1,78 +1,78 @@
 <div class='wrapper'>
-<div class='container'>
-<nav align='right'><a routerLink='/surveys'>Cancel</a></nav>
-</div>
-<fieldset>
   <div class='container'>
-  <legend>Put the question and options here:</legend>
-    <form (submit)='onSubmit(form)' #form='ngForm'>
-      <div class='form-group'>
-        <label for="">Question</label>
-        <input type="text" class='form-control' name='question' [(ngModel)]='survey.question' required #question='ngModel' minlength="8">
-        <div *ngIf='question.touched && question.errors'>
-          <div *ngIf='question.errors.required' class='alert alert-danger'>
-            You must enter a question
-          </div>
-          <div *ngIf='question.errors.minlength' class='alert alert-danger'>
-            Question must be at least {{ question.errors.minlength.requiredLength }} characters
-          </div>
-        </div>
-      </div>
-
-      <div class='form-group'>
-        <label for="">Option 1</label>
-        <input type="text" class='form-control' name='option_1' [(ngModel)]='survey.option_1' required #option1='ngModel' minlength="3">
-        <div *ngIf='option1.touched && option1.errors'>
-          <div *ngIf='option1.errors.required' class='alert alert-danger'>
-            You must enter an option
-          </div>
-          <div *ngIf='option1.errors.minlength' class='alert alert-danger'>
-            Option must be at least {{ option1.errors.minlength.requiredLength }} characters
-          </div>
-        </div>
-      </div>
-
-      <div class='form-group'>
-        <label for="">Option 2</label>
-        <input type="text" class='form-control' name='option_2' [(ngModel)]='survey.option_2' required #option2='ngModel' minlength="3">
-        <div *ngIf='option2.touched && option2.errors'>
-          <div *ngIf='option2.errors.required' class='alert alert-danger'>
-            You must enter an option
-          </div>
-          <div *ngIf='option2.errors.minlength' class='alert alert-danger'>
-            Option must be at least {{ option2.errors.minlength.requiredLength }} characters
-          </div>
-        </div>
-      </div>
-
-      <div class='form-group'>
-        <label for="">Option 3</label>
-        <input type="text" class='form-control' name='option_3' [(ngModel)]='survey.option_3' required #option3='ngModel' minlength="3">
-        <div *ngIf='option3.touched && option3.errors'>
-          <div *ngIf='option3.errors.required' class='alert alert-danger'>
-            You must enter an option
-          </div>
-          <div *ngIf='option3.errors.minlength' class='alert alert-danger'>
-            Option must be at least {{ option3.errors.minlength.requiredLength }} characters
-          </div>
-        </div>
-      </div>
-
-      <div class='form-group'>
-        <label for="">Option 4</label>
-        <input type="text" class='form-control' name='option_4' [(ngModel)]='survey.option_4' required #option4='ngModel' minlength="3">
-        <div *ngIf='option4.touched && option4.errors'>
-          <div *ngIf='option4.errors.required' class='alert alert-danger'>
-            You must enter an option
-          </div>
-          <div *ngIf='option4.errors.minlength' class='alert alert-danger'>
-            Option must be at least {{ option4.errors.minlength.requiredLength }} characters
-          </div>
-        </div>
-      </div>
-
-      <button *ngIf='form.valid' class='btn btn-primary'>Create Poll</button>
-    </form>
+    <nav align='right'><a routerLink='/surveys'>Cancel</a></nav>
   </div>
-</fieldset>
+  <fieldset>
+    <div class='container'>
+    <legend>Put the question and options here:</legend>
+      <form (submit)='onSubmit(form)' #form='ngForm'>
+        <div class='form-group'>
+          <label for="">Question</label>
+          <input type="text" class='form-control' name='question' [(ngModel)]='survey.question' required #question='ngModel' minlength="8">
+          <div *ngIf='question.touched && question.errors'>
+            <div *ngIf='question.errors.required' class='alert alert-danger'>
+              You must enter a question
+            </div>
+            <div *ngIf='question.errors.minlength' class='alert alert-danger'>
+              Question must be at least {{ question.errors.minlength.requiredLength }} characters
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label for="">Option 1</label>
+          <input type="text" class='form-control' name='option_1' [(ngModel)]='survey.option_1' required #option1='ngModel' minlength="3">
+          <div *ngIf='option1.touched && option1.errors'>
+            <div *ngIf='option1.errors.required' class='alert alert-danger'>
+              You must enter an option
+            </div>
+            <div *ngIf='option1.errors.minlength' class='alert alert-danger'>
+              Option must be at least {{ option1.errors.minlength.requiredLength }} characters
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label for="">Option 2</label>
+          <input type="text" class='form-control' name='option_2' [(ngModel)]='survey.option_2' required #option2='ngModel' minlength="3">
+          <div *ngIf='option2.touched && option2.errors'>
+            <div *ngIf='option2.errors.required' class='alert alert-danger'>
+              You must enter an option
+            </div>
+            <div *ngIf='option2.errors.minlength' class='alert alert-danger'>
+              Option must be at least {{ option2.errors.minlength.requiredLength }} characters
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label for="">Option 3</label>
+          <input type="text" class='form-control' name='option_3' [(ngModel)]='survey.option_3' required #option3='ngModel' minlength="3">
+          <div *ngIf='option3.touched && option3.errors'>
+            <div *ngIf='option3.errors.required' class='alert alert-danger'>
+              You must enter an option
+            </div>
+            <div *ngIf='option3.errors.minlength' class='alert alert-danger'>
+              Option must be at least {{ option3.errors.minlength.requiredLength }} characters
+            </div>
+          </div>
+        </div>
+
+        <div class='form-group'>
+          <label for="">Option 4</label>
+          <input type="text" class='form-control' name='option_4' [(ngModel)]='survey.option_4' required #option4='ngModel' minlength="3">
+          <div *ngIf='option4.touched && option4.errors'>
+            <div *ngIf='option4.errors.required' class='alert alert-danger'>
+              You must enter an option
+            </div>
+            <div *ngIf='option4.errors.minlength' class='alert alert-danger'>
+              Option must be at least {{ option4.errors.minlength.requiredLength }} characters
+            </div>
+          </div>
+        </div>
+
+        <button *ngIf='form.valid' class='btn btn-primary'>Create Poll</button>
+      </form>
+    </div>
+  </fieldset>
 </div>
